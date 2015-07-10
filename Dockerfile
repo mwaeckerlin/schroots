@@ -14,4 +14,7 @@ RUN mkdir -p /var/lib/jenkins
 VOLUME /var/chroot
 VOLUME /etc/schroot
 
-CMD setup-susebootstrap.sh && setup-debootstrap.sh && sleep infinity
+CMD \
+  bash -x setup-susebootstrap.sh && \
+  bash -x setup-debootstrap.sh && \
+  sleep infinity
