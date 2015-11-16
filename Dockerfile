@@ -7,6 +7,7 @@ RUN wget -O- https://dev.marc.waeckerlin.org/repository/PublicKey | apt-key add 
 RUN apt-get update -y
 RUN apt-get install -y debian-chroots suse-chroots 
 RUN echo "/var/lib/jenkins /var/lib/jenkins none rw,bind 0 0" >> /etc/schroot/default/fstab
+RUN echo "/android /android none rw,bind 0 0" >> /etc/schroot/default/fstab
 RUN mkdir -p /var/lib/jenkins
 #RUN setup-susebootstrap.sh
 #RUN setup-debootstrap.sh
